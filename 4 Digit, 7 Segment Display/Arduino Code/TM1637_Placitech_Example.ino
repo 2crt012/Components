@@ -8,8 +8,8 @@
  *  you will use a TM1637 module as a scoreboard. There will be 2 scores 
  *  (left and right) that you will be able able to change using push buttons.
 
- *  I used for this example is an Arduino Nano, but you can use any Micro
- *  that you have, like the Arduino UNO or MEGA.
+ *  The microcontroller I used for this example is an Arduino Nano, but you
+ *  can use any Micro that you have, like the Arduino UNO or MEGA.
  *  
 */
 
