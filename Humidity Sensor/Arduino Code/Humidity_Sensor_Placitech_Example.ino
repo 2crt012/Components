@@ -12,6 +12,8 @@
  *  can use any Micro that you have, like the Arduino UNO or MEGA.
  *  
 */
+
+// Make sure to have this library installed
 #include "DHT.h"
 
 #define DHTPIN 5 
