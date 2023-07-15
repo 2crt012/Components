@@ -4,10 +4,10 @@
  *  Instagram: @placitech_
  *  YouTube: PLACITECH
  *   
- *  Use this code to learn the basics of solenoid. In this example
- *  you'll control the solenoid using an N-Channel MOSFET. To let
- *  current flow through the component, just press the button and
- *  the Arduino will close the circuit by sending a HIGH signal to the
+ *  Use this code to learn the basics of water pumps. In this example
+ *  you'll control the water pump using an N-Channel MOSFET. To start
+ *  the water flow, just press the button and the Arduino will close
+ *  the circuit and turn ON the pump by sending a HIGH signal to the
  *  Gate of the transistor.
  *  
  *  The microcontroller I used for this example is an Arduino Nano, but you
@@ -16,15 +16,15 @@
 */
 
 const byte but = 5;
-const byte sol = 2;
+const byte pump = 2;
 
 
 
 void setup() {
   Serial.begin(9600);
   pinMode(but, INPUT_PULLUP);
-  pinMode(sol, OUTPUT);
-  digitalWrite(sol, LOW);
+  pinMode(pump, OUTPUT);
+  digitalWrite(pump, LOW);
 }
 
 
@@ -35,9 +35,9 @@ void loop() {
     delay(10);
   }
 
-  // Let current flow
-  digitalWrite(sol, HIGH);
-  Serial.println("Solenoid ON");
+  // Turn ON the pump
+  digitalWrite(pump, HIGH);
+  Serial.println("Water Pump ON");
   Serial.println();
 
   // Wait for button to be released
@@ -45,8 +45,8 @@ void loop() {
     delay(10);
   }
 
-  // Stop current flow
-  digitalWrite(sol, LOW);
-  Serial.println("Solenoid OFF");
+  // Turn OFF the pump
+  digitalWrite(pump, LOW);
+  Serial.println("Water Pump OFF");
   Serial.println();
 }
